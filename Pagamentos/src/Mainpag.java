@@ -3,11 +3,11 @@ public class Mainpag {
         // Simulação de um objeto MPay existente
         MPay mPay = new MPayImpl();
         mPay.setCreditCardNo("1234567890123456");
-        mPay.setCustomerName("John Doe");
-        mPay.setCardExpMonth("12");
-        mPay.setCardExpYear("2025");
+        mPay.setCustomerName("Cristina Silva");
+        mPay.setCardExpMonth("19");
+        mPay.setCardExpYear("2029");
         mPay.setCVVNo(123);
-        mPay.setTotalAmount(100.00);
+        mPay.setTotalAmount(1000.0);
 
         // Adaptando MPay para PPay
         PPay pPay = new MPayToPPayAdapter(mPay);
