@@ -1,4 +1,0 @@
-LightOnCommand:Living Room
-LightOnCommand:Kitchen
-LightOffCommand:Living Room
-LightOffCommand:Kitchen

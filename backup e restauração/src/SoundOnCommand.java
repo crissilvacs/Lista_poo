@@ -1,17 +1,17 @@
 import java.util.List;
 
-public class LightOffCommand implements Command {
-    private Light light;
+public class SoundOnCommand implements Command {
+    private Sound sound;
     private List<Command> history;
 
-    public LightOffCommand(Light light, List<Command> history) {
-        this.light = light;
+    public SoundOnCommand(Sound sound, List<Command> history) {
+        this.sound = sound;
         this.history = history;
     }
 
     @Override
     public void execute() {
-        light.off();
+        sound.on();
     }
 
     @Override

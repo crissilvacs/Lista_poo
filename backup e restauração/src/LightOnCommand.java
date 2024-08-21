@@ -1,11 +1,12 @@
-import java.io.BufferedReader;
-import java.io.PrintWriter;
+import java.util.List;
 
 public class LightOnCommand implements Command {
     private Light light;
+    private List<Command> history;
 
-    public LightOnCommand(Light light) {
+    public LightOnCommand(Light light, List<Command> history) {
         this.light = light;
+        this.history = history;
     }
 
     @Override
@@ -14,11 +15,7 @@ public class LightOnCommand implements Command {
     }
 
     @Override
-    public void store(PrintWriter writer) {
-        writer.println("LightOnCommand:" + light.getLocation());
-    }
-
-    @Override
-    public void load(BufferedReader reader) {
+    public void store() {
+        history.add(this);
     }
 }

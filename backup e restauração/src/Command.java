@@ -1,8 +1,6 @@
-import java.io.PrintWriter;
-import java.io.BufferedReader;
+import java.io.Serializable;
 
-public interface Command {
+public interface Command extends Serializable{
     void execute();
-    void store(PrintWriter writer);
-    void load(BufferedReader reader);
+    void store();
 }

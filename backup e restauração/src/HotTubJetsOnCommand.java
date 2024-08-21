@@ -1,17 +1,17 @@
 import java.util.List;
 
-public class LightOffCommand implements Command {
-    private Light light;
+public class HotTubJetsOffCommand implements Command {
+    private HotTub hotTub;
     private List<Command> history;
 
-    public LightOffCommand(Light light, List<Command> history) {
-        this.light = light;
+    public HotTubJetsOffCommand(HotTub hotTub, List<Command> history) {
+        this.hotTub = hotTub;
         this.history = history;
     }
 
     @Override
     public void execute() {
-        light.off();
+        hotTub.jetsOff();
     }
 
     @Override

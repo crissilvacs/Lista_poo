@@ -1,17 +1,17 @@
 import java.util.List;
 
-public class LightOffCommand implements Command {
-    private Light light;
+public class TVOnCommand implements Command {
+    private TV tv;
     private List<Command> history;
 
-    public LightOffCommand(Light light, List<Command> history) {
-        this.light = light;
+    public TVOnCommand(TV tv, List<Command> history) {
+        this.tv = tv;
         this.history = history;
     }
 
     @Override
     public void execute() {
-        light.off();
+        tv.on();
     }
 
     @Override
@@ -19,3 +19,4 @@ public class LightOffCommand implements Command {
         history.add(this);
     }
 }
+
