@@ -1,9 +1,9 @@
 public class Light {
     public void on() {
-        System.out.println("Light is ON");
+        System.out.println("A luz está LIGADA");
     }
 
     public void off() {
-        System.out.println("Light is OFF");
+        System.out.println("A luz está DESLIGADA");
     }
 }

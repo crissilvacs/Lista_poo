@@ -1,25 +1,25 @@
 public class Sound {
     public void on() {
-        System.out.println("Sound is ON");
+        System.out.println("O som está LIGADO");
     }
 
     public void off() {
-        System.out.println("Sound is OFF");
+        System.out.println("O som está DESLIGADO");
     }
 
     public void setCd() {
-        System.out.println("CD is set");
+        System.out.println("O CD está inserido");
     }
 
     public void setDvd() {
-        System.out.println("DVD is set");
+        System.out.println("o DVD está inserido");
     }
 
     public void setRadio() {
-        System.out.println("Radio is set");
+        System.out.println("O rádio está ajustado");
     }
 
     public void setVolume() {
-        System.out.println("Volume is set");
+        System.out.println("O volume está ajustado");
     }
 }

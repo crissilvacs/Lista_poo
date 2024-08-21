@@ -1,21 +1,21 @@
 public class CeilingFan {
     public void high() {
-        System.out.println("CeilingFan is on HIGH");
+        System.out.println("Ventilador de teto está em ALTO");
     }
 
     public void medium() {
-        System.out.println("CeilingFan is on MEDIUM");
+        System.out.println("Ventilador de teto está em Medio");
     }
 
     public void low() {
-        System.out.println("CeilingFan is on LOW");
+        System.out.println("Ventilador de teto está em BAIXO");
     }
 
     public void off() {
-        System.out.println("CeilingFan is OFF");
+        System.out.println("Ventilador de teto está Desligado");
     }
 
     public void getSpeed() {
-        System.out.println("Getting CeilingFan speed");
+        System.out.println("Obtendo velocidade do RoofFan");
     }
 }

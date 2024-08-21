@@ -8,7 +8,7 @@ public class CommandHistory {
             out.writeObject(history);
         }
     }
-
+    @SuppressWarnings("unchecked")
     public static List<Command> loadHistory(String filename) throws IOException, ClassNotFoundException {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename))) {
             return (List<Command>) in.readObject();

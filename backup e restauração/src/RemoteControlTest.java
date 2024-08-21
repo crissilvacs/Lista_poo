@@ -1,5 +1,6 @@
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
+import java.io.IOException;
 
 public class RemoteControlTest {
     public static void main(String[] args) {
@@ -18,32 +19,19 @@ public class RemoteControlTest {
 
             // Criação dos comandos
             Command tvOn = new TVOnCommand(tv, commandHistory);
-            Command tvOff = new TVOffCommand(tv, commandHistory);
             Command lightOn = new LightOnCommand(light, commandHistory);
-            Command lightOff = new LightOffCommand(light, commandHistory);
             Command garageDoorUp = new GarageDoorUpCommand(garageDoor, commandHistory);
-            Command garageDoorDown = new GarageDoorDownCommand(garageDoor, commandHistory);
             Command soundOn = new SoundOnCommand(sound, commandHistory);
-            Command soundOff = new SoundOffCommand(sound, commandHistory);
             Command ceilingFanHigh = new CeilingFanHighCommand(ceilingFan, commandHistory);
-            Command ceilingFanOff = new CeilingFanOffCommand(ceilingFan, commandHistory);
             Command hotTubJetsOn = new HotTubJetsOnCommand(hotTub, commandHistory);
-            Command hotTubJetsOff = new HotTubJetsOffCommand(hotTub, commandHistory);
             Command securityControlArm = new SecurityControlArmCommand(securityControl, commandHistory);
-            Command securityControlDisarm = new SecurityControlDisarmCommand(securityControl, commandHistory);
 
-            // Execução dos comandos
+            // Exemplo de uso de comandos
             tvOn.execute();
             tvOn.store();
 
             lightOn.execute();
             lightOn.store();
-
-            tvOff.execute();
-            tvOff.store();
-
-            lightOff.execute();
-            lightOff.store();
 
             garageDoorUp.execute();
             garageDoorUp.store();
@@ -60,15 +48,38 @@ public class RemoteControlTest {
             securityControlArm.execute();
             securityControlArm.store();
 
-            // Salvando o histórico
-            CommandHistory.saveHistory(commandHistory, "command_history.ser");
+            // Simulação de queda de energia
+            System.out.println("\n--- Simulando Queda de Energia ---\n");
+            simulatePowerOutage(tv, light, garageDoor, sound, ceilingFan, hotTub, securityControl);
 
-            // Simulação de falha e recuperação
-            System.out.println("\n--- System Reboot ---\n");
+            // Simulação de restauração de energia
+            System.out.println("\n--- Reiniciando Sistema ---\n");
+            powerbacksimulation(tv, light, garageDoor, sound, ceilingFan, hotTub, securityControl);
             List<Command> loadedHistory = CommandHistory.loadHistory("command_history.ser");
             CommandHistory.executeHistory(loadedHistory);
+
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    // Método para simular a queda de energia
+    private static void simulatePowerOutage(TV tv, Light light, GarageDoor garageDoor, Sound sound, CeilingFan ceilingFan, HotTub hotTub, SecurityControl securityControl) {
+        tv.off();
+        light.off();
+        garageDoor.down();
+        sound.off();
+        ceilingFan.off();
+        hotTub.jetsOff();
+        securityControl.disarm();
+    }
+    private static void powerbacksimulation(TV tv, Light light, GarageDoor garageDoor, Sound sound, CeilingFan ceilingFan, HotTub hotTub, SecurityControl securityControl) {
+        tv.on();
+        light.on();
+        garageDoor.up();
+        sound.on();
+        ceilingFan.high();
+        hotTub.jetsOn();
+        securityControl.arm();
     }
 }

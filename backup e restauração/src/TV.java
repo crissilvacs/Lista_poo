@@ -1,17 +1,17 @@
 public class TV {
     public void on() {
-        System.out.println("TV is ON");
+        System.out.println("A TV está LIGADA");
     }
 
     public void off() {
-        System.out.println("TV is OFF");
+        System.out.println("A TV está DESLIGADA");
     }
 
     public void setInputChannel() {
-        System.out.println("TV input channel set");
+        System.out.println("Canal de entrada da TV definido");
     }
 
     public void setVolume() {
-        System.out.println("TV volume set");
+        System.out.println("Volume da TV ajustado");
     }
 }

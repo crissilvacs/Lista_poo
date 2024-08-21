@@ -1,17 +1,18 @@
+// HotTubJetsOnCommand.java
 import java.util.List;
 
-public class HotTubJetsOffCommand implements Command {
+public class HotTubJetsOnCommand implements Command {
     private HotTub hotTub;
     private List<Command> history;
 
-    public HotTubJetsOffCommand(HotTub hotTub, List<Command> history) {
+    public HotTubJetsOnCommand(HotTub hotTub, List<Command> history) {
         this.hotTub = hotTub;
         this.history = history;
     }
 
     @Override
     public void execute() {
-        hotTub.jetsOff();
+        hotTub.jetsOn();
     }
 
     @Override

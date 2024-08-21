@@ -1,9 +1,9 @@
 public class SecurityControl {
     public void arm() {
-        System.out.println("Security is ARMED");
+        System.out.println("A segurança está ARMADA");
     }
 
     public void disarm() {
-        System.out.println("Security is DISARMED");
+        System.out.println("A segurança está DESARMADA");
     }
 }

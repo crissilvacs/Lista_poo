@@ -1,14 +1,14 @@
 
 public class GarageDoor {
     public void up() {
-        System.out.println("Garage Door is UP");
+        System.out.println("A garagem esta ABERTA");
     }
 
     public void down() {
-        System.out.println("Garage Door is DOWN");
+        System.out.println("A garagem esta FECHADA");
     }
 
     public void stop() {
-        System.out.println("Garage Door stopped");
+        System.out.println("A garagem esta PARADA");
     }
 }

@@ -1,17 +1,17 @@
 public class HotTub {
     public void circulate() {
-        System.out.println("HotTub is circulating");
+        System.out.println("A banheira de hidromassagem está circulando");
     }
 
     public void jetsOn() {
-        System.out.println("HotTub jets are ON");
+        System.out.println("A banheira de hidromassagem está ligada");
     }
 
     public void jetsOff() {
-        System.out.println("HotTub jets are OFF");
+        System.out.println("A banheira de hidromassagem está desligada");
     }
 
     public void setTemperature() {
-        System.out.println("HotTub temperature is set");
+        System.out.println("A temperatura da banheira de hidromassagem foi ajustada");
     }
 }
