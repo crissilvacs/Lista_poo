@@ -3,6 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 // Singleton para gerenciar o arquivo de configuração
 public class ConfigManager {
@@ -46,5 +47,12 @@ public class ConfigManager {
     // Método para imprimir todos os dados da configuração
     public void printAllConfig() {
         configData.forEach((key, value) -> System.out.println(key + "=" + value));
+    }
+
+    // Método para filtrar as configurações com base em um prefixo
+    public Map<String, String> filterConfig(String prefix) {
+        return configData.entrySet().stream()
+                .filter(entry -> entry.getKey().startsWith(prefix))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 }

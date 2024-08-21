@@ -5,5 +5,10 @@ public class Mainconfig {
 
         // Imprimir todos os dados do arquivo de configuração
         configManager.printAllConfig();
+
+        // filtrar
+        String AppId = configManager.getConfigValue("AppId");
+         System.out.println("AppId: " + AppId);
     }
 }
+
