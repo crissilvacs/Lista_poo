@@ -1,4 +1,4 @@
-public class Main {
+public class Mainconfig {
     public static void main(String[] args) {
         // Acessar a instância única de ConfigManager
         ConfigManager configManager = ConfigManager.getInstance();

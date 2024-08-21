@@ -1,4 +1,4 @@
-public class Main {
+public class Mainpag {
     public static void main(String[] args) {
         // Simulação de um objeto MPay existente
         MPay mPay = new MPayImpl();

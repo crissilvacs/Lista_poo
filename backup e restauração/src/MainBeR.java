@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.io.IOException;
 
-public class RemoteControlTest {
+public class MainBeR {
     public static void main(String[] args) {
         try {
             // Criação dos dispositivos

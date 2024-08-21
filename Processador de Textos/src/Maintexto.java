@@ -1,4 +1,4 @@
-public class Main {
+public class Maintexto {
     public static void main(String[] args) {
         ProcessadorTexto processadorMaiuscula = new TudoMaiuscula();
         ProcessadorTexto processadorMinuscula = new TudoMinuscula();

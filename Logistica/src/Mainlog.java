@@ -1,4 +1,4 @@
-public class Main {
+public class Mainlog {
     public static void main(String[] args) {
         Produto produto = new Produto(1, "Notebook");
 
