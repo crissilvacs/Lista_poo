@@ -1,4 +1,5 @@
 public interface PPay {
+    //metodos
     String getCustCardNo();
     String getCardOwnerName();
     String getCardExpMonthDate();

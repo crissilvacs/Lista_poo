@@ -1,4 +1,5 @@
 public class Sound {
+    //metodos para ligar e desligar o som
     public void on() {
         System.out.println("O som está LIGADO");
     }

@@ -1,4 +1,5 @@
 public class CeilingFan {
+//metodos para controlar o ventilador de teto
     public void high() {
         System.out.println("Ventilador de teto está em ALTO");
     }

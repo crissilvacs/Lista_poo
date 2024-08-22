@@ -1,4 +1,5 @@
 public class SecurityControl {
+    //metodos para armar e desarmar a segurança
     public void arm() {
         System.out.println("A segurança está ARMADA");
     }

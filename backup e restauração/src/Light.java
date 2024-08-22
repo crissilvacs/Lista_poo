@@ -1,4 +1,5 @@
 public class Light {
+    //
     public void on() {
         System.out.println("A luz está LIGADA");
     }

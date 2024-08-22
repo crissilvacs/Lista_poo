@@ -1,5 +1,6 @@
 
 public class GarageDoor {
+//metodos para abrir, fechar e parar a garagem
     public void up() {
         System.out.println("A garagem esta ABERTA");
     }

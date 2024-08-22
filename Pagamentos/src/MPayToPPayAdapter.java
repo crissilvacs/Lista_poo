@@ -1,10 +1,11 @@
 public class MPayToPPayAdapter implements PPay {
+ //Mpay tratada como Ppay  
     private MPay mPay;
 
     public MPayToPPayAdapter(MPay mPay) {
         this.mPay = mPay;
     }
-
+//metodos
     @Override
     public String getCustCardNo() {
         return mPay.getCreditCardNo();

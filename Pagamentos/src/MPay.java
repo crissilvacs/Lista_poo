@@ -1,4 +1,5 @@
 public interface MPay {
+    //metodos
     String getCreditCardNo();
     String getCustomerName();
     String getCardExpMonth();

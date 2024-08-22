@@ -73,6 +73,7 @@ public class MainBeR {
         hotTub.jetsOff();
         securityControl.disarm();
     }
+    // Método para simular a restauração de energia
     private static void powerbacksimulation(TV tv, Light light, GarageDoor garageDoor, Sound sound, CeilingFan ceilingFan, HotTub hotTub, SecurityControl securityControl) {
         tv.on();
         light.on();

@@ -1,11 +1,12 @@
 public class MPayImpl implements MPay {
+  // Atributos
     private String creditCardNo;
     private String customerName;
     private String cardExpMonth;
     private String cardExpYear;
     private int cVVNo;
     private double totalAmount;
-
+//metodos
     @Override
     public String getCreditCardNo() {
         return creditCardNo;
